@@ -1,0 +1,8 @@
+<input list="champs" type="text" [(ngModel)]="selected" (change)="selectChampion()">
+<datalist id="champs">
+    <option *ngFor="let champ of champs" [value]="champ.id">{{champ.id}}</option>
+</datalist>
+<div *ngIf="champ!==undefined">
+    Pedro {{champs.data[selected].name}}
+    <!-- {{champ.data[id].key}} -->
+</div>
