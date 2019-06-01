@@ -1,0 +1,20 @@
+<div class="champions-container">
+    <!-- <div *ngFor='let champ of champs' class="avatarWrapper_1bLa">
+        <div class=" championIcon_fq0L" style="height: 122px; width: 122px;">
+            <div class="image_3oOd avatar_6Gx2" style="background-position: center center;
+            background-size: 120%;
+            opacity: 1;
+            top: 20.74px;
+            width: 80.52px;
+            height: 80.52px;
+            left: 20.74px;" [ngStyle]="{'background-image':'url(https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/' + champ.id + '.png&resize=1000:)'}">
+            </div>
+            <img class="frame_2EiO" src="assets/images/elements/ChampionIconFrame.png" alt="Champion Frame" style="max-width: 122px;">
+        </div>
+    </div> -->
+    <ng-container *ngFor="let champ of champs; let i = index">
+        <div class="champ-box" (click)="pickChamp(i)">
+            <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.id}}_0.jpg" alt="">
+        </div>
+    </ng-container>
+</div>

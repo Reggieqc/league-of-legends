@@ -1,0 +1,40 @@
+<!-- <app-button (cssRefresh)=refreshCss($event)></app-button> -->
+<header class="pepe" [ngClass]="{ 'caca': addCss}">
+    <img src="assets/images/header/header-background.png" alt="" class="background-container">
+    <img src="assets/images/header/overlay-shadow.png" alt="" class="overlay-shadow">
+    <div class="overlay-shadow"></div>
+    <div class="content">
+        <h2>start your journey</h2>
+        <img class="divider" src="assets/images/header/divider.png" alt="">
+        <button routerLink="/landing" class="
+                btn-primary
+                btn-animation-1
+                btn-animation-2
+                btn-animation-3" tabindex="0">
+            <span class="btn-span-1"></span>
+            <span class="btn-span-2"></span>
+            <span class="btn-span-3">EMPEZAR</span>
+        </button>
+        <!-- <div class="flex-center" style="height: 140px;">
+            <div class="btn-img"  routerLink="/search-champ">
+                <img width="246" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/signup-na-experiment/en_US/bfdb5c42e96dc90f20ed52507f6769ddfe4f2bb1/assets/assets/en_US/btns/get-started-btn.png">
+            </div>
+            <video width="350" class="video-btn loop hide-ie hide-edge hide-mobile hide" playsinline="true" autoplay loop>
+                <source src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/signup-na-experiment/en_US/bfdb5c42e96dc90f20ed52507f6769ddfe4f2bb1/assets/assets/en_US/btns/get-started-loop.webm" type="video/webm">
+            </video>
+            <video width="350" class="video-btn intro hide-ie hide-edge hide-mobile" controls  playsinline="true" loop autoplay >
+                <source src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/signup-na-experiment/en_US/bfdb5c42e96dc90f20ed52507f6769ddfe4f2bb1/assets/assets/en_US/btns/get-started-intro.webm" type="video/webm">
+            </video>
+        </div> -->
+    </div>
+    <div class="video-container">
+        <div class="header">
+            <div id="vimeo-wrapper">
+                <video  autoplay loop>
+                    <source src="assets/videos/home-background.mp4" type="video/mp4">
+                </video>
+                <!-- <iframe src="https://player.vimeo.com/video/302061504?autoplay=1&loop=1&background=1" frameborder="0"></iframe> -->
+            </div>
+        </div>
+    </div>
+</header>

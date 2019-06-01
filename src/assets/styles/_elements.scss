@@ -1,0 +1,326 @@
+/*-------------------------------
+		1.-ELEMENTS
+--------------------------------*/
+
+.black-tag {
+    background: $dark-color;
+    color: #8e96a7;
+    display: inline;
+    font-size: 0.4em;
+    text-transform: uppercase;
+    font-family: $primary-font-regular;
+    font-weight: $regular;
+    letter-spacing: 0.2em;
+    padding: 0.4em 0.6em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: $border-radius;
+    align-items: center;
+}
+
+//--------BUTTONS--------//
+button {
+    cursor: pointer;
+    transition: all ease 0.2s;
+    opacity: 1;
+    &:disabled {
+        opacity: 0.4;
+        transition: all ease 0.2s;
+        cursor: not-allowed;
+    }
+}
+
+.btn-animation-1 {
+    color: #b2d9db;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.btn-primary {
+    font-family: $primary-font-bold, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+    background-color: #1e2328;
+    color: #f0e6d2;
+    display: inline-flex;
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.065rem;
+    max-width: 500px;
+    overflow: hidden;
+    padding: 12px 20px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-animation-1 .btn-span-1 {
+    background-image: linear-gradient(#0ac8b9, #0596aa 50%, #005a82);
+}
+
+.btn-span-2,
+.btn-span-2:before,
+.btn-span-1,
+.btn-span-1:before {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.btn-animation-1 .btn-span-1:before {
+    background-color: #08b2c9;
+    background-image: linear-gradient(#cdfafa, #08b2c9 50%, #3295c7);
+}
+
+.btn-span-2:before,
+.btn-span-1:before {
+    -webkit-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    will-change: opacity;
+}
+
+.btn-animation-2 {
+    padding: 20px 50px;
+}
+
+.btn-animation-1 .btn-span-2 {
+    background-color: #1e2328;
+    background-image: none;
+}
+
+.btn-primary:after,
+.btn-primary:before,
+.btn-primary>span {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.btn-span-2 {
+    background-clip: padding-box;
+    background-origin: padding-box;
+    border: 2px solid transparent;
+}
+
+.btn-animation-1 .btn-span-2:before {
+    background-image: url('../images/elements/btn-background.png'), linear-gradient(#1e2328, #005a82);
+    background-position: 0 50%;
+    background-repeat: repeat-x;
+    transition: opacity 0.4s ease, -webkit-transform .4s ease;
+    width: 2000%;
+    will-change: transform;
+}
+
+.btn-animation-1 .btn-span-2:after {
+    border-color: #09beb6;
+    box-shadow: 0 0 1px 4px rgba(10, 200, 185, .4), inset 0 0 15px 8px rgba(10, 200, 185, .4);
+}
+
+.btn-span-2:after {
+    border-style: solid;
+    border-width: 1px;
+    bottom: 1px;
+    content: "";
+    left: 1px;
+    opacity: 0;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    -webkit-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}
+
+.btn-span-3 {
+    position: relative;
+}
+
+.btn-animation-1.btn-animation-3:focus,
+.btn-animation-1:hover {
+    color: #cdfafa;
+}
+
+.btn-animation-3:focus .btn-span-2:before,
+.btn-animation-3:focus .btn-span-1:before,
+.btn-primary:hover .btn-span-2:before,
+.btn-primary:hover .btn-span-1:before {
+    opacity: 1;
+}
+
+.btn-animation-1.btn-animation-3:focus .btn-span-2:before,
+.btn-animation-1:hover .btn-span-2:before {
+    opacity: 0.6;
+}
+
+//--------END BUTTONS--------//
+
+
+//--------INPUTS--------//
+form {
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+        label {
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+        input {
+            width: 100%;
+            border-bottom: 1px solid $font-color;
+            &.ng-dirty~label,
+            &:focus~label {
+                top: -9px;
+                transition: all ease 0.5s;
+                font-size: 0.7em;
+            }
+            &.ng-invalid.ng-touched {
+                border-bottom: 1px solid $danger-color;
+            }
+            @media only screen and (min-width:800px) {
+                &.ng-dirty~label,
+                &:focus~label {
+                    font-size: 0.45em;
+                    top: 0px;
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media only screen and (min-width:800px) {
+        .form-group {
+            label {
+                top: 11px;
+            }
+        }
+    }
+}
+
+.alert {
+    color: $primary-color;
+    position: absolute;
+    bottom: -1.4em;
+    left: 0;
+    font-size: 0.6em;
+    @media only screen and (min-width: 800px) {
+        font-size: 0.45em;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #1a1b20 inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: $form-color !important;
+}
+
+//--------END INPUTS--------//
+
+
+//--------UI ELEMENTS--------//
+
+.background-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    @media only screen and (min-width: 800px) {
+        object-position: 0 -2em;
+    }
+}
+
+.shadow-gradient {
+    position: absolute;
+    bottom: -1.5px;
+    left: -0.9px;
+    width: 102%;
+    z-index: -1;
+}
+
+.wrap {
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 15px;
+    .arrow {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 6px;
+    /*   background-color: rgba(0, 0, 0, 0.8); */
+        &:before, &:after {
+        content:'';
+            position: absolute;
+            bottom: 100%;
+            width: 50%;
+            padding-bottom:inherit;
+            background-color: inherit;
+            border-left: 1px solid #d7b675
+        }
+        &:before{
+            border-right: 1px solid #d7b675;
+        }
+        &:before {
+            right: 45.8%;
+            width: 100%;
+            -ms-transform-origin: 100% 100%;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            -ms-transform: skewX(45deg);
+            -webkit-transform: skewX(45deg);
+            transform: skewX(45deg);
+            border-top: 1px solid #d7b675
+        }
+        &:after {
+            left: 54.2%;
+            width: 100%;
+            -ms-transform-origin: 0 100%;
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -ms-transform: skewX(-45deg);
+            -webkit-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+            border-top: 1px solid #d7b675
+        }
+    }
+}
+.wrap-2 {
+    @extend .wrap;
+    height: 32px;
+    .arrow-2 {
+        @extend .arrow;
+        padding-bottom: 14px;   
+    }
+}
+ 

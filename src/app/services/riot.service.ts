@@ -11,7 +11,7 @@ export class RiotService {
 
   getQuery( query: string){
     const url = `https://cors-anywhere.herokuapp.com/https://la2.api.riotgames.com/${ query }`;
-    const params = new HttpParams().set('api_key','RGAPI-00483332-17ae-4b61-87be-d675b02d27bb')
+    const params = new HttpParams().set('api_key','RGAPI-a549825d-6bd0-4b10-b7e9-6406562860aa')
     return this.http.get(url + params)
   }
 
@@ -29,9 +29,5 @@ export class RiotService {
 
   getChamps():Observable<Object>{
     return this.http.get(`http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json`)
-  }
-
-  getChampImages(champName: string){
-    return this.http.get(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champName}_0.jpg`)
   }
 }

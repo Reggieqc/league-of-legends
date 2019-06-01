@@ -1,0 +1,16 @@
+<section class="search-page">
+    <div class="overlay-top-left"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <input list="champs" type="text" [(ngModel)]="selected" (change)="selectChampion()">
+        <datalist id="champs">
+            <option *ngFor="let champ of champs" [value]="champ.id">{{champ.id}}</option>
+        </datalist> 
+        
+        <div *ngIf="champ">
+            <h2>{{champ.name}}</h2>
+            <img class="background-img" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.id}}_0.jpg" alt="">
+        </div>
+        <app-champion (champPicked)="getChampPicked($event)"></app-champion>
+    </div>
+</section>

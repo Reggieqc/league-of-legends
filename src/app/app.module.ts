@@ -1,21 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+
+//Rutas
+import { APP_ROUTES } from './app.routes';
+
+//Modulos 
+import { PagesModule } from './pages/pages.module';
+
+//Librerias
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RiotService } from './services/riot.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
   ],
   imports: [
+    SlickCarouselModule,
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    PagesModule,
+    APP_ROUTES
   ],
   providers: [
     RiotService

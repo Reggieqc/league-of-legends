@@ -1,0 +1,62 @@
+/*-------------------------------
+		0.1.-VARIABLES
+--------------------------------*/
+
+
+/*----------- Fonts -------------*/
+
+@font-face {
+    font-family: 'Beaufortfor-Bold';
+    font-weight: 700;
+    src: url('/assets/fonts/BeaufortforLOL-Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Beaufortfor-Heavy';
+    font-weight: 1000;
+    src: url('/assets/fonts/BeaufortforLOL-Heavy.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Beaufortfor-Medium';
+    font-weight: 500;
+    src: url('/assets/fonts/BeaufortforLOL-Medium.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Beaufortfor-Regular';
+    src: url('/assets/fonts/BeaufortforLOL-Regular__25S-B.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Spiegel-Regular';
+    src: url('/assets/fonts/Spiegel-Regular.ttf') format('truetype')
+}
+
+$primary-font-bold:'Beaufortfor-Bold',
+sans-serif;
+$primary-font-heavy: 'Beaufortfor-Heavy',
+sans-serif;
+$primary-font-medium: 'Beaufortfor-Medium',
+sans-serif;
+$primary-font-regular: 'Beaufortfor-Regular',
+sans-serif;
+$secondary-font-regular: 'Spiegel-Regular', sans-serif;
+
+$regular:400;
+$bold: 700;
+$heavy: 1000;
+
+/*----------- Colors -------------*/
+
+$primary-color:#ff0039;
+$secondary-color: #2ad398;
+$tertiary-color: #5774be;
+$font-color:#494e57;
+$white: white;
+$dark-color:#121218;
+$darker-color:#0f0f13;
+$form-color: #868686;
+$danger-color:#d60000;
+$main-background-color:#1a1b20;
+$border-radius: 3px;
